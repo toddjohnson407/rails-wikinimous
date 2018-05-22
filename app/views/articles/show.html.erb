@@ -1,16 +1,23 @@
 
-<h2><%= @article.title %></h2>
-<br>
-<p><%= @article.content %></p>
+<body class="bg-info">
 
+  <h2 class="jumbotron" style="margin-left: 0vh; font-family: 'Times New Roman', Times, serif;" align="center">
+    <%= @article.title %>
+  </h2>
 
-<div class="text-center">
-  <%= link_to "View All Articles", articles_path,
-  class: "btn btn-primary text-center" %>
-  <%= link_to "Edit This Article", edit_article_path,
-  class: "btn btn-primary text-center" %>
-  <%= link_to "Delete", article_path(@article),
-  class: "btn btn-primary text-center",
-  method: :delete,
-  data: { confirm: "Are you sure?" } %>
-</div>
+  <div class="center-content" style="margin-left: 50vh; margin-bottom: 10vh; margin-top: 10vh;">
+    <p class="col-lg-9"><%= @article.content %></p>
+  </div>
+  <div class="container">
+    <div class="text-center">
+      <%= link_to "View All Articles", articles_path,
+      class: "btn btn-primary text-center" %>
+      <%= link_to "Edit This Article", edit_article_path,
+      class: "btn btn-primary text-center" %>
+      <%= link_to "Delete", article_path(@article),
+      class: "btn btn-primary text-center",
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
+</body>

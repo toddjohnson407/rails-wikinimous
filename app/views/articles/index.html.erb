@@ -1,15 +1,16 @@
-<div class="container text-center">
-  <h1 style="margin-top: 45px; margin-left: 66vh;">ARTICLES
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1 style="margin-left: 66vh; font-family: 'Times New Roman', Times, serif;">
+      Wikinimous
+    <%= link_to "Create an Article", new_article_path,
+    class: "btn btn-primary text-center",
+    style: "margin: 0vh 6vh 2vh 30vh;"
+    %>
 
-  <%= link_to "Create an Article", new_article_path,
-  class: "btn btn-primary text-center",
-  style: "margin: 0vh 6vh 2vh 30vh;"
-  %>
-
-  </h1>
-
-  <br>
-
+    </h1>
+  </div>
+</div>
+<br>
   <% @articles.each do |article| %>
     <ul class="text-center" style="list-style-type: none;">
       <li style="padding: 20px;">
@@ -24,4 +25,4 @@
     </ul>
   <% end %>
 
-</div>
+
